@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito-client-1:
+            client-id: 5mi9b051slh292j8mqrjt5im50
+            client-secret: dq7dhlvbo9odd9d1jcour82hb0s6ru81mp63o8kv4l8ah91vlkg
+            client-name: dev.trpgim
+            redirect-uri-template: http://localhost:8080/login/oauth2/code/cognito
+            provider: cognito
+            scope: openid
+            authorization-grant-type: authorization_code
+        provider:
+          cognito:
+            authorization-uri: https://trpgim.auth.ap-northeast-1.amazoncognito.com/oauth2/authorize
+            token-uri: https://trpgim.auth.ap-northeast-1.amazoncognito.com/oauth2/token
+            user-info-uri: https://trpgim.auth.ap-northeast-1.amazoncognito.com/oauth2/userInfo
+            jwk-set-uri: https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_CgUlaTPW2/.well-known/jwks.json
